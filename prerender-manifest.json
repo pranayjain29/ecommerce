@@ -30,30 +30,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/flipkart-scrapper": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/flipkart-scrapper",
-      "dataRoute": "/flipkart-scrapper.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/": {
       "experimentalBypassFor": [
         {
@@ -77,13 +53,37 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
+    },
+    "/flipkart-scrapper": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/flipkart-scrapper",
+      "dataRoute": "/flipkart-scrapper.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "fadd4c07baa048f7b3dbc9f43c220b6a",
-    "previewModeSigningKey": "4b08dc778b13b8ecade75682276f0bc5d329bf79ff1f86037bdead3f0c9d40a8",
-    "previewModeEncryptionKey": "92ce0aed57dd20735a9337709c01df104f3d1edd59803af71a74351f3931d694"
+    "previewModeId": "ffe257a69fdadcfb972d99e457623c6e",
+    "previewModeSigningKey": "f8f80c1edb5879ab9003335073582727cb400c555a1ebb4a554d467d0af10408",
+    "previewModeEncryptionKey": "e476ec8e52dbb11a5e8dc24f5c58eb930a9a98e5f6d0d5804f3ac657c7096536"
   }
 }
