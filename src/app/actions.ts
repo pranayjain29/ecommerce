@@ -1,6 +1,7 @@
 // @ts-nocheck
 'use server';
 
+
 const AMAZON_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook/f035451c-f5ce-4106-b297-41637bb9fb2c';
 const FLIPKART_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook/f7057902-f89f-4f16-81af-c9f9f20182ab';
 
