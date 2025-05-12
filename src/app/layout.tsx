@@ -64,10 +64,10 @@ export default function RootLayout({
                   </SheetHeader>
                   <nav className="flex flex-col space-y-1 p-4">
                     <Button variant="ghost" asChild className="w-full justify-start text-base px-3 py-2">
-                      <Link href="/" onClick={() => document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'Escape'}))}>Amazon Research</Link>
+                      <Link href="/">Amazon Research</Link>
                     </Button>
                     <Button variant="ghost" asChild className="w-full justify-start text-base px-3 py-2">
-                      <Link href="/flipkart-scrapper" onClick={() => document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'Escape'}))}>Flipkart Scrapper</Link>
+                      <Link href="/flipkart-scrapper">Flipkart Scrapper</Link>
                     </Button>
                   </nav>
                 </SheetContent>
