@@ -35,6 +35,9 @@ export function MobileNavigation() {
           <Button variant="ghost" asChild className="w-full justify-start text-base px-3 py-2" onClick={closeMenu}>
             <Link href="/flipkart-scrapper">Flipkart Scrapper</Link>
           </Button>
+          <Button variant="ghost" asChild className="w-full justify-start text-base px-3 py-2" onClick={closeMenu}>
+            <Link href="/new-research-tool">New Research Tool</Link>
+          </Button>
         </nav>
       </SheetContent>
     </Sheet>

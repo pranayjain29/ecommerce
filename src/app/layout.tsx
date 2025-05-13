@@ -5,7 +5,9 @@ import { Inter, Roboto_Mono } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { Button } from '@/components/ui/button';
-import { MobileNavigation } from '@/components/layout/mobile-navigation'; // Import MobileNavigation
+import { MobileNavigation } from '@/components/layout/mobile-navigation'; 
+import { SheetTitle } from '@/components/ui/sheet';
+
 
 const inter = Inter({
   subsets: ['latin'],
@@ -45,6 +47,9 @@ export default function RootLayout({
               </Button>
               <Button variant="ghost" asChild className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2">
                 <Link href="/flipkart-scrapper">Flipkart Scrapper</Link>
+              </Button>
+              <Button variant="ghost" asChild className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2">
+                <Link href="/new-research-tool">New Research Tool</Link>
               </Button>
             </nav>
             {/* Mobile Navigation */}
