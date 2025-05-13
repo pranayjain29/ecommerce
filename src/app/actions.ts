@@ -1,8 +1,9 @@
 // @ts-nocheck
 'use server';
 
-const AMAZON_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook/f035451c-f5ce-4106-b297-41637bb9fb2c';
-const FLIPKART_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook/f7057902-f89f-4f16-81af-c9f9f20182ab';
+const AMAZON_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook-test/7b1cfaf5-0f01-4b7e-95dd-8c38fd4fac1c';
+const FLIPKART_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook/264ad665-67c1-4a57-ac0e-9a8d0396b396';
+const NEW_RESEARCH_TOOL_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook-test/2a2c16b1-7e0c-43a6-be1c-a306771e3431';
 
 interface AmazonActionResult {
   success: boolean;
@@ -211,3 +212,4 @@ export async function searchNewResearchTool(keyword: string, email: string): Pro
     };
   }
 }
+
