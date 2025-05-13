@@ -5,11 +5,11 @@ import { NewResearchForm, type NewResearchFormData } from '@/components/new-rese
 import { searchNewResearchTool } from '../actions';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Loader2, CheckCircle, AlertTriangle, FileText } from 'lucide-react';
+import { Loader2, CheckCircle, AlertTriangle, ShoppingBag } from 'lucide-react';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
-export default function NewResearchToolPage() {
+export default function FlipkartResearchPage() {
   const [status, setStatus] = useState<Status>('idle');
   const [message, setMessage] = useState<string>('');
   const [searchedKeyword, setSearchedKeyword] = useState<string>('');
@@ -37,7 +37,7 @@ export default function NewResearchToolPage() {
     } catch (error) {
       setStatus('error');
       setMessage(error instanceof Error ? error.message : 'An unexpected error occurred. Please try again.');
-      console.error("New research tool search failed:", error);
+      console.error("Flipkart research tool search failed:", error);
     }
   };
 
@@ -46,11 +46,11 @@ export default function NewResearchToolPage() {
       <Card className="w-full max-w-lg shadow-xl rounded-xl">
         <CardHeader className="text-center">
           <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-            <FileText size={32} strokeWidth={1.5} />
+            <ShoppingBag size={32} strokeWidth={1.5} />
           </div>
-          <CardTitle className="text-3xl font-bold">New Research Tool</CardTitle>
+          <CardTitle className="text-3xl font-bold">Flipkart Research</CardTitle>
           <CardDescription className="text-lg text-muted-foreground pt-1">
-            Enter a keyword and your email to generate a report with our new tool.
+            Enter a keyword and your email to generate a Flipkart product report.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6 p-6 sm:p-8">
@@ -62,7 +62,7 @@ export default function NewResearchToolPage() {
               <div>
                 <AlertTitle className="font-semibold">Generating Report...</AlertTitle>
                 <AlertDescription>
-                  Processing your request for &quot;{searchedKeyword}&quot; and preparing your report. Please wait.
+                  Processing your request for &quot;{searchedKeyword}&quot; and preparing your Flipkart report. Please wait.
                 </AlertDescription>
               </div>
             </Alert>

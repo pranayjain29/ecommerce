@@ -49,7 +49,7 @@ export default function RootLayout({
                 <Link href="/flipkart-scrapper">Flipkart Scrapper</Link>
               </Button>
               <Button variant="ghost" asChild className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2">
-                <Link href="/new-research-tool">New Research Tool</Link>
+                <Link href="/flipkart-research">Flipkart Research</Link>
               </Button>
             </nav>
             {/* Mobile Navigation */}
@@ -66,3 +66,4 @@ export default function RootLayout({
     </html>
   );
 }
+
