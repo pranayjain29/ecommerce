@@ -5,7 +5,7 @@ import { Inter, Roboto_Mono } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { Button } from '@/components/ui/button';
-import { MobileNavigation } from '@/components/layout/mobile-navigation'; 
+import { MobileNavigation } from '@/components/layout/mobile-navigation';
 import { SheetTitle } from '@/components/ui/sheet';
 
 
@@ -48,9 +48,6 @@ export default function RootLayout({
               <Button variant="ghost" asChild className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2">
                 <Link href="/flipkart-scrapper">Flipkart Scrapper</Link>
               </Button>
-              <Button variant="ghost" asChild className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2">
-                <Link href="/flipkart-research">Flipkart Research</Link>
-              </Button>
             </nav>
             {/* Mobile Navigation */}
             <div className="md:hidden">
@@ -66,4 +63,3 @@ export default function RootLayout({
     </html>
   );
 }
-

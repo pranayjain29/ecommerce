@@ -1,9 +1,9 @@
+
 // @ts-nocheck
 'use server';
 
 const AMAZON_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook-test/7b1cfaf5-0f01-4b7e-95dd-8c38fd4fac1c';
 const FLIPKART_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook/264ad665-67c1-4a57-ac0e-9a8d0396b396';
-const NEW_RESEARCH_TOOL_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook-test/2a2c16b1-7e0c-43a6-be1c-a306771e3431';
 
 interface AmazonActionResult {
   success: boolean;
@@ -142,74 +142,3 @@ export async function searchFlipkartProduct(fsns: string, email: string): Promis
     };
   }
 }
-
-
-interface NewResearchToolResult {
-  success: boolean;
-  message: string;
-  searchedKeyword: string;
-  emailSentTo?: string;
-}
-
-export async function searchNewResearchTool(keyword: string, email: string): Promise<NewResearchToolResult> {
-  if (!keyword || keyword.trim() === '') {
-    return {
-      success: false,
-      message: 'Search keyword cannot be empty.',
-      searchedKeyword: keyword,
-    };
-  }
-  if (!email || email.trim() === '') {
-    return {
-      success: false,
-      message: 'Email address cannot be empty.',
-      searchedKeyword: keyword,
-    };
-  }
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    return {
-        success: false,
-        message: 'Invalid email address format.',
-        searchedKeyword: keyword,
-        emailSentTo: email,
-    };
-  }
-
-  try {
-    const response = await fetch(NEW_RESEARCH_TOOL_WEBHOOK_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ keyword, email }),
-    });
-
-    if (response.ok) {
-      return {
-        success: true,
-        message: `We've started generating the report for '${keyword}'. It will be sent to ${email} shortly.`,
-        searchedKeyword: keyword,
-        emailSentTo: email,
-      };
-    } else {
-      const errorBody = await response.text();
-      console.error(`Webhook error for new tool, keyword "${keyword}" and email "${email}": ${response.status} ${response.statusText}`, errorBody);
-      return {
-        success: false,
-        message: `Could not process request for '${keyword}'. The server responded with status ${response.status}. Please try again.`,
-        searchedKeyword: keyword,
-        emailSentTo: email,
-      };
-    }
-  } catch (error) {
-    console.error(`Network or unexpected error for new tool, keyword "${keyword}" and email "${email}":`, error);
-    return {
-      success: false,
-      message: `An unexpected error occurred while searching for '${keyword}'. Please check your connection and try again.`,
-      searchedKeyword: keyword,
-      emailSentTo: email,
-    };
-  }
-}
-
