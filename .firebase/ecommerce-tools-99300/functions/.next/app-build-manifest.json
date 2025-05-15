@@ -1,0 +1,39 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-ada41476a3749e25.js",
+      "static/chunks/4bd1b696-57d7e958a3b6c634.js",
+      "static/chunks/684-2e25f8f2c260e62a.js",
+      "static/chunks/main-app-88a0a9742c364011.js",
+      "static/chunks/app/_not-found/page-e25b139fd7697298.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-ada41476a3749e25.js",
+      "static/chunks/4bd1b696-57d7e958a3b6c634.js",
+      "static/chunks/684-2e25f8f2c260e62a.js",
+      "static/chunks/main-app-88a0a9742c364011.js",
+      "static/css/e2f91d1fc5d22b5b.css",
+      "static/chunks/905-d39156f30ca9b53e.js",
+      "static/chunks/977-1d3e8aef4d6c9f29.js",
+      "static/chunks/app/layout-0fbb1dcc9f8578e8.js"
+    ],
+    "/flipkart-scrapper/page": [
+      "static/chunks/webpack-ada41476a3749e25.js",
+      "static/chunks/4bd1b696-57d7e958a3b6c634.js",
+      "static/chunks/684-2e25f8f2c260e62a.js",
+      "static/chunks/main-app-88a0a9742c364011.js",
+      "static/chunks/905-d39156f30ca9b53e.js",
+      "static/chunks/450-b1409278e08c7c93.js",
+      "static/chunks/app/flipkart-scrapper/page-383ec96d5e7f53ff.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-ada41476a3749e25.js",
+      "static/chunks/4bd1b696-57d7e958a3b6c634.js",
+      "static/chunks/684-2e25f8f2c260e62a.js",
+      "static/chunks/main-app-88a0a9742c364011.js",
+      "static/chunks/905-d39156f30ca9b53e.js",
+      "static/chunks/450-b1409278e08c7c93.js",
+      "static/chunks/app/page-8104ac6f3dd12781.js"
+    ]
+  }
+}
