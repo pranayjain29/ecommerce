@@ -2,8 +2,8 @@
 // @ts-nocheck
 'use server';
 
-const AMAZON_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook-test/7b1cfaf5-0f01-4b7e-95dd-8c38fd4fac1c';
-const FLIPKART_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook/264ad665-67c1-4a57-ac0e-9a8d0396b396';
+const AMAZON_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook/7b1cfaf5-0f01-4b7e-95dd-8c38fd4fac1c';
+const FLIPKART_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook/f7057902-f89f-4f16-81af-c9f9f20182ab';
 
 interface AmazonActionResult {
   success: boolean;
