@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -52,6 +53,8 @@ export default function HomePage() {
           <CardTitle className="text-3xl font-bold">Amazon Keyword Research</CardTitle>
           <CardDescription className="text-lg text-muted-foreground pt-1">
             Enter a keyword and your email to generate an Amazon product report.
+            <br />
+            (Limit: 80 reports per month)
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6 p-6 sm:p-8">
@@ -96,3 +99,4 @@ export default function HomePage() {
     </div>
   );
 }
+

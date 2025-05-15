@@ -49,7 +49,7 @@ export async function searchAmazonProduct(keyword: string, email: string): Promi
     if (response.ok) {
       return {
         success: true,
-        message: `We've started generating the report for '${keyword}'. It will be sent to ${email} shortly.`,
+        message: `We've started generating the report for '${keyword}'. It will be sent to ${email} within 5 minutes.`,
         searchedKeyword: keyword,
         emailSentTo: email,
       };
@@ -118,7 +118,7 @@ export async function searchFlipkartProduct(fsns: string, email: string): Promis
     if (response.ok) {
       return {
         success: true,
-        message: `We've started scraping Flipkart. The results will be sent to ${email} shortly.`,
+        message: `We've started scraping Flipkart. The results will be sent to ${email} within 5 minutes.`,
         searchedFsns: fsns,
         emailSentTo: email,
       };
@@ -142,3 +142,4 @@ export async function searchFlipkartProduct(fsns: string, email: string): Promis
     };
   }
 }
+

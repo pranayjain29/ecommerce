@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -26,7 +27,7 @@ export default function FlipkartScrapperPage() {
       }
       if (result.success) {
         setStatus('success');
-        setMessage(`We have started scraping and we will notify you through email at ${result.emailSentTo || data.email}.`);
+        setMessage(result.message); // Use message from server action
       } else {
         setStatus('error');
         setMessage(result.message);
@@ -47,7 +48,7 @@ export default function FlipkartScrapperPage() {
           </div>
           <CardTitle className="text-3xl font-bold">Flipkart FSN Scrapper</CardTitle>
           <CardDescription className="text-lg text-muted-foreground pt-1">
-            Enter FSNs (comma-separated) and your email to scrape Flipkart product prices.
+            Enter FSNs (comma-separated, max 40) and your email to scrape Flipkart product prices.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6 p-6 sm:p-8">
