@@ -1,0 +1,28 @@
+{
+  "node": {
+    "6016b80b320f4f1684be773b9745f9e3c42a62ce25": {
+      "workers": {
+        "app/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fuser%2Fstudio%2Fsrc%2Fapp%2Factions.ts%22%2C%5B%7B%22id%22%3A%226016b80b320f4f1684be773b9745f9e3c42a62ce25%22%2C%22exportedName%22%3A%22searchAmazonProduct%22%7D%2C%7B%22id%22%3A%2260c7dc19f4281d6d2b09c6389ee4c7f991e362952e%22%2C%22exportedName%22%3A%22searchFlipkartProduct%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      }
+    },
+    "60c7dc19f4281d6d2b09c6389ee4c7f991e362952e": {
+      "workers": {
+        "app/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fuser%2Fstudio%2Fsrc%2Fapp%2Factions.ts%22%2C%5B%7B%22id%22%3A%226016b80b320f4f1684be773b9745f9e3c42a62ce25%22%2C%22exportedName%22%3A%22searchAmazonProduct%22%7D%2C%7B%22id%22%3A%2260c7dc19f4281d6d2b09c6389ee4c7f991e362952e%22%2C%22exportedName%22%3A%22searchFlipkartProduct%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "UQPyAluCJfPQCSyFNkvQiynksIjthwjJxqOhs2OIJas="
+}
