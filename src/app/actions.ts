@@ -2,8 +2,8 @@
 // @ts-nocheck
 'use server';
 
-const AMAZON_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook/f035451c-f5ce-4106-b297-41637bb9fb2c';
-const FLIPKART_WEBHOOK_URL = 'https://scrappy.app.n8n.cloud/webhook/f7057902-f89f-4f16-81af-c9f9f20182ab';
+const AMAZON_WEBHOOK_URL = process.env.AMAZON_WEBHOOK_URL;
+const FLIPKART_WEBHOOK_URL = process.env.FLIPKART_WEBHOOK_URL;
 
 interface AmazonActionResult {
   success: boolean;
@@ -13,6 +13,15 @@ interface AmazonActionResult {
 }
 
 export async function searchAmazonProduct(keyword: string, email: string): Promise<AmazonActionResult> {
+  if (!AMAZON_WEBHOOK_URL) {
+    console.error("Missing AMAZON_WEBHOOK_URL environment variable");
+    return {
+      success: false,
+      message: 'Server configuration error. Please contact support.',
+      searchedKeyword: keyword,
+    };
+  }
+
   if (!keyword || keyword.trim() === '') {
     return {
       success: false,
@@ -82,6 +91,15 @@ interface FlipkartActionResult {
 }
 
 export async function searchFlipkartProduct(fsns: string, email: string): Promise<FlipkartActionResult> {
+  if (!FLIPKART_WEBHOOK_URL) {
+    console.error("Missing FLIPKART_WEBHOOK_URL environment variable");
+    return {
+      success: false,
+      message: 'Server configuration error. Please contact support.',
+      searchedFsns: fsns,
+    };
+  }
+
   if (!fsns || fsns.trim() === '') {
     return {
       success: false,
@@ -142,4 +160,3 @@ export async function searchFlipkartProduct(fsns: string, email: string): Promis
     };
   }
 }
-
