@@ -27,7 +27,7 @@ export default function FlipkartScrapperPage() {
       }
       if (result.success) {
         setStatus('success');
-        setMessage(result.message); // Use message from server action
+        setMessage(result.message); 
       } else {
         setStatus('error');
         setMessage(result.message);
@@ -48,7 +48,7 @@ export default function FlipkartScrapperPage() {
           </div>
           <CardTitle className="text-3xl font-bold">Flipkart FSN Scrapper</CardTitle>
           <CardDescription className="text-lg text-muted-foreground pt-1">
-            Enter FSNs (comma-separated, max 40) and your email to scrape Flipkart product prices.
+            Enter FSNs (comma-separated, max 80) and your email to scrape Flipkart product prices.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6 p-6 sm:p-8">
@@ -88,7 +88,7 @@ export default function FlipkartScrapperPage() {
         </CardContent>
       </Card>
        <footer className="mt-8 text-center text-sm text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} Keyword Research Tools. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} ECommerce Tools. All rights reserved.</p>
       </footer>
     </div>
   );
