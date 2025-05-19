@@ -48,6 +48,9 @@ export default function RootLayout({
               <Button variant="ghost" asChild className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2">
                 <Link href="/flipkart-scrapper">Flipkart Scrapper</Link>
               </Button>
+              <Button variant="ghost" asChild className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2">
+                <Link href="/about">About</Link>
+              </Button>
             </nav>
             {/* Mobile Navigation */}
             <div className="md:hidden">
